@@ -1,0 +1,100 @@
+Consumo de memoria:
+Memoria total: 5157138432 bytes (aprox. 4.80 Gb)
+Memoria libre: 2915696640 bytes (aprox. 2.72 Gb)
+
+Proceso con mayor uso de memoria encontrado:
+PID: 53642
+memoria usada: 790164 KB (aprox. 771.64 MB)
+
+Librerias del proceso 53642:
+/usr/lib/x86_64-linux-gnu/libc.so.6
+/usr/lib/x86_64-linux-gnu/libc.so.6
+/usr/lib/x86_64-linux-gnu/libc.so.6
+/usr/lib/x86_64-linux-gnu/libc.so.6
+/usr/lib/x86_64-linux-gnu/libc.so.6
+/usr/lib/x86_64-linux-gnu/libm.so.6
+/usr/lib/x86_64-linux-gnu/libm.so.6
+/usr/lib/x86_64-linux-gnu/libm.so.6
+/usr/lib/x86_64-linux-gnu/libm.so.6
+/usr/lib/x86_64-linux-gnu/libm.so.6
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+/usr/lib/x86_64-linux-gnu/libpthread.so.0
+/usr/lib/x86_64-linux-gnu/libpthread.so.0
+/usr/lib/x86_64-linux-gnu/libpthread.so.0
+/usr/lib/x86_64-linux-gnu/libpthread.so.0
+/usr/lib/x86_64-linux-gnu/libpthread.so.0
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+/usr/lib/x86_64-linux-gnu/libdl.so.2
+/usr/lib/x86_64-linux-gnu/libdl.so.2
+/usr/lib/x86_64-linux-gnu/libdl.so.2
+/usr/lib/x86_64-linux-gnu/libdl.so.2
+/usr/lib/x86_64-linux-gnu/libdl.so.2
+/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Archivos abiertos por 53642:
+El archivo 0 es: socket:[342797]
+El archivo 1 es: socket:[342799]
+El archivo 2 es: socket:[342801]
+El archivo 3 es: socket:[342803]
+El archivo 4 es: anon_inode:[eventpoll]
+El archivo 5 es: anon_inode:[io_uring]]
+El archivo 6 es: pipe:[343666]o_uring]]
+El archivo 7 es: pipe:[343666]o_uring]]
+El archivo 8 es: pipe:[343667]o_uring]]
+El archivo 9 es: pipe:[343667]o_uring]]
+El archivo 10 es: anon_inode:[eventfd]]]
+El archivo 11 es: anon_inode:[eventpoll]
+El archivo 12 es: anon_inode:[io_uring]]
+El archivo 13 es: pipe:[346473]o_uring]]
+El archivo 14 es: pipe:[346473]o_uring]]
+El archivo 15 es: anon_inode:[eventfd]]]
+El archivo 16 es: anon_inode:[eventpoll]
+El archivo 17 es: anon_inode:[io_uring]]
+El archivo 18 es: pipe:[343669]o_uring]]
+El archivo 19 es: pipe:[343669]o_uring]]
+El archivo 20 es: anon_inode:[eventfd]]]
+El archivo 21 es: /dev/nulle:[eventfd]]]
+El archivo 22 es: socket:[350853]ntfd]]]
+El archivo 23 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/remoteagent.log
+El archivo 24 es: socket:[339953]a/.vscode-server/data/logs/20250614T151155/remoteagent.log
+El archivo 25 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/remoteTelemetry.log
+El archivo 26 es: socket:[339864]a/.vscode-server/data/logs/20250614T151155/remoteTelemetry.log
+El archivo 27 es: anon_inode:[eventpoll]de-server/data/logs/20250614T151155/remoteTelemetry.log
+El archivo 28 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/remoteexthost.log
+El archivo 29 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/remoteExtHostTelemetry.log
+El archivo 30 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/vscode.git/Git.logetry.log
+El archivo 31 es: anon_inode:[io_uring]ode-server/data/logs/20250614T151155/exthost1/vscode.git/Git.logetry.log
+El archivo 32 es: pipe:[343675]o_uring]ode-server/data/logs/20250614T151155/exthost1/vscode.git/Git.logetry.log
+El archivo 33 es: pipe:[343675]o_uring]ode-server/data/logs/20250614T151155/exthost1/vscode.git/Git.logetry.log
+El archivo 34 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/output_logging_20250614T151200/4-remote-attach.log
+El archivo 35 es: anon_inode:[eventfd]code-server/data/logs/20250614T151155/exthost1/output_logging_20250614T151200/4-remote-attach.log
+El archivo 36 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/mechatroner.rainbow-csv/rainbow_csv_debug_channel.log
+El archivo 37 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 38 es: socket:[350854]a/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 39 es: socket:[349218]a/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 40 es: socket:[354239]a/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 41 es: socket:[347243]a/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 42 es: socket:[345785]a/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 43 es: socket:[347245]a/.vscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 44 es: anon_inode:inotifyvscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 45 es: socket:[347247]ifyvscode-server/data/logs/20250614T151155/exthost1/Postman.postman-for-vscode-prod.log_debug_channel.log
+El archivo 46 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/vscode.github/GitHub.logde-prod.log_debug_channel.log
+El archivo 47 es: socket:[347249]a/.vscode-server/data/logs/20250614T151155/exthost1/vscode.github/GitHub.logde-prod.log_debug_channel.log
+El archivo 48 es: socket:[345787]a/.vscode-server/data/logs/20250614T151155/exthost1/vscode.github/GitHub.logde-prod.log_debug_channel.log
+El archivo 49 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/output_logging_20250614T151200/1-Tailwind CSS IntelliSense.log
+El archivo 51 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/GitHub.copilot-chat/GitHub Copilot Chat.logSS IntelliSense.log
+El archivo 53 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/GitHub.copilot/GitHub Copilot.logt Chat.logSS IntelliSense.log
+El archivo 54 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/output_logging_20250614T151200/2-Postman.logS IntelliSense.log
+El archivo 56 es: /home/jojopernia/.vscode-server/data/logs/20250614T151155/exthost1/output_logging_20250614T151200/3-GitHub Copilot Log (Code References).log

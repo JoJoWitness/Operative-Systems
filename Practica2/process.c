@@ -43,7 +43,7 @@ void listProcess() {
     struct dirent *de;
     char path[64], name[256];
     DIR *dr = opendir("/proc");
-\
+
     if (dr == NULL) {
         perror("No se pudo abrir /proc");
         return;

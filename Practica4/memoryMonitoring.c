@@ -119,7 +119,7 @@ void getPIDMaps(char* pidID, FILE* file) {
 
 void getPIDFiles(char* pidID, FILE* file) {
   char path[64];
-  char header[64];
+  char header[128];
   snprintf(path, sizeof(path), "/proc/%s/fd", pidID);
   snprintf(header, sizeof(header), "\nArchivos abiertos por %s:\n", pidID);
   fputs(header, file);
@@ -132,11 +132,11 @@ void getPIDFiles(char* pidID, FILE* file) {
   }
   while ((dir = readdir(dr)) != NULL) {
   if (isdigit(dir->d_name[0])) {
-    char linkpath[128];
-    char target[128];
+    char linkpath[350];
+    char target[350];
     snprintf(linkpath, sizeof(linkpath), "%s/%s", path, dir->d_name);
     readlink(linkpath, target, sizeof(target) - 1);
-    char line[256];
+    char line[1024];
     snprintf(line, sizeof(line), "El archivo %s es: %s\n", dir->d_name, target);
     fputs(line, file);
   }  
@@ -163,9 +163,9 @@ int main(void) {
     }
     char line[256];
     fputs("Consumo de memoria:\n", file);
-    snprintf(line, sizeof(line), "Memoria total: %lu bytes (aprox. %.2f MB)\n", stats.total_memory, stats.total_memory/1024.0);
+    snprintf(line, sizeof(line), "Memoria total: %lu bytes (aprox. %.2f Gb)\n", stats.total_memory, (stats.total_memory/1024.0)/1024.0/1024.0);
     fputs(line, file);
-    snprintf(line, sizeof(line), "Memoria libre: %lu bytes (aprox. %.2f MB)\n\n", stats.free_memory, stats.free_memory/1024.0);
+    snprintf(line, sizeof(line), "Memoria libre: %lu bytes (aprox. %.2f Gb)\n\n", stats.free_memory, (stats.free_memory/1024.0)/1024.0/1024.0);
     fputs(line, file);
 
     int max_pid = process_with_more_memory(file);
