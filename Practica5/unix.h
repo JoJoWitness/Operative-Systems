@@ -5,10 +5,7 @@
 #include <sys/mman.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+
 
 #define SIZE 4096
 
