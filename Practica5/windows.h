@@ -1,9 +1,6 @@
 #include <windows.h>
-
 #define SIZE 4096
-#define SHARED_MEM_NAME "MySharedMemory"
-#define SEMAPHORE1_NAME "MySemaphore1"
-#define SEMAPHORE2_NAME "MySemaphore2"
+
 
 typedef struct {
     char buffer[SIZE];
@@ -11,15 +8,24 @@ typedef struct {
 
 int pipeFunction(int argc, char *argv[])  {
 
+    const char* semaphore1 = "semaphore1";
+    const char* semaphore2 = "semaphore2";
+    const char* sm_name = "shared_memory_string";
+
     HANDLE hMapFile = CreateFileMapping(
-    INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(shared_data), SHARED_MEM_NAME);
+    INVALID_HANDLE_VALUE, 
+    NULL, 
+    PAGE_READWRITE, 
+    0, 
+    sizeof(shared_data), 
+    sm_name);
 
     shared_data* sm = (shared_data*)MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(shared_data));
 
     sm->buffer[0] = '\0';
 
-    HANDLE hSem1 = CreateSemaphore(NULL, 0, 1, SEMAPHORE1_NAME);
-    HANDLE hSem2 = CreateSemaphore(NULL, 0, 1, SEMAPHORE2_NAME);
+    HANDLE hSem1 = CreateSemaphore(NULL, 0, 1, semaphore1);
+    HANDLE hSem2 = CreateSemaphore(NULL, 0, 1, semaphore2);
 
     HANDLE hReadPipe, hWritePipe;
     SECURITY_ATTRIBUTES sa = { sizeof(SECURITY_ATTRIBUTES), NULL, TRUE };
@@ -33,10 +39,10 @@ int pipeFunction(int argc, char *argv[])  {
 
     if (argc > 1 && strcmp(argv[1], "p1") == 0) {
         HANDLE hWritePipe = (HANDLE)_strtoui64(argv[2], NULL, 0);
-        HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, SHARED_MEM_NAME);
+        HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, sm_name);
         shared_data* sm = (shared_data*)MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(shared_data));
-        HANDLE hSem1 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, SEMAPHORE1_NAME);
-        HANDLE hSem2 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, SEMAPHORE2_NAME);
+        HANDLE hSem1 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, semaphore1);
+        HANDLE hSem2 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, semaphore2);
 
         char input_str[100];
         printf("Enter any character string:\n");
@@ -62,10 +68,10 @@ int pipeFunction(int argc, char *argv[])  {
 
     if (argc > 1 && strcmp(argv[1], "p2") == 0) {
         HANDLE hReadPipe = (HANDLE)_strtoui64(argv[2], NULL, 0);
-        HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, SHARED_MEM_NAME);
+        HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, sm_name);
         shared_data* sm = (shared_data*)MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(shared_data));
-        HANDLE hSem1 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, SEMAPHORE1_NAME);
-        HANDLE hSem2 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, SEMAPHORE2_NAME);
+        HANDLE hSem1 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, semaphore1);
+        HANDLE hSem2 = OpenSemaphore(SEMAPHORE_ALL_ACCESS, FALSE, semaphore2);
 
         WaitForSingleObject(hSem1, INFINITE);
 
